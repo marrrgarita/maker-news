@@ -2,7 +2,12 @@
   <% @posts.each_with_index do |post, index| %>
     <li>
       <div><%= index + 1 %>. <%= link_to post.title, post.url %></div>
-      <div><%= link_to "Comment on post", post_path(post) %></div>
+      <div>
+        <%= link_to "Comment on post", post_path(post) %>
+        <% if post.user == current_user %>
+          | <%= link_to "Edit", edit_post_path(post) %>
+        <% end %>
+      </div>
     </li>
   <% end %>
 </ul>
