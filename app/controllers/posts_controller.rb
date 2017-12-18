@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
   before_action :ensure_login, except: [:index, :show]
+  before_action :ensure_ownership, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -48,6 +49,10 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :url)
+  end
+
+  def ensure_ownership
+    redirect_to root_path unless current_user == @post.user
   end
 
 end
