@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:show, :edit, :update, :destroy]
   before_action :ensure_login, except: [:index, :show]
+  before_action :find_post, only: [:show, :edit, :update, :destroy]
   before_action :ensure_ownership, only: [:edit, :update, :destroy]
 
   def index
@@ -8,6 +8,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @post.comments
   end
 
   def new
