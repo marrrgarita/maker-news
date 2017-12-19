@@ -43,4 +43,8 @@ header {
 main {
   padding: 20px;
   background-color: #dfdbdb;
+
+  h2, h3, form, ul, p {
+    margin: 10px 0;
+  }
 }

@@ -1,26 +1,27 @@
-<h2><%= @post.title %></h2>
+<div id="showpost">
+  <h2><%= @post.title %></h2>
 
-<h3>Comments:</h3>
+  <h3>Comments:</h3>
 
-<% if current_user %>
-  <%= form_with model: [@post, @comment] do |f| %>
-    <%= f.label :content %>
-    <%= f.text_area :content %>
-    <%= f.submit %>
+  <% if current_user %>
+    <%= form_with model: [@post, @comment] do |f| %>
+      <p><%= f.text_area :content %></p>
+      <p><%= f.submit %></p>
+    <% end %>
   <% end %>
-<% end %>
 
-<ul>
-  <% @comments.each do |comment| %>
-    <li>
-      <div><%= comment.content %></div>
-      <% if comment.user == current_user %>
-        <div>
-          <%= link_to "Edit", edit_comment_path(comment) %>
-        </div>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
+  <ul id="comments">
+    <% @comments.each do |comment| %>
+      <li class="comment">
+        <div><%= comment.content %></div>
+        <% if comment.user == current_user %>
+          <div>
+            <%= link_to "Edit", edit_comment_path(comment) %>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
 
-<p><%= link_to "Back", root_path %></p>
+  <p><%= link_to "Back", root_path %></p>
+</div>

@@ -1,5 +1,8 @@
+<h3>Edit Comment:</h3>
+
 <%= form_with model: @comment do |f| %>
-  <%= f.label :content %>
-  <%= f.text_area :content %>
-  <%= f.submit %>
+  <p><%= f.text_area :content %></p>
+  <p><%= f.submit %></p>
 <% end %>
+
+<p><%= link_to "Back", post_path(@comment.post) %></p>

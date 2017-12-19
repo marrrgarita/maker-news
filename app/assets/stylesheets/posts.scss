@@ -15,3 +15,21 @@
     color: #000;
   }
 }
+
+#showpost {
+  form {
+    textarea {
+      width: 400px;
+      height: 100px;
+    }
+  }
+}
+
+#comments {
+  list-style: square;
+  padding: 0 20px;
+
+  .comment {
+    padding: 10px;
+  }
+}
