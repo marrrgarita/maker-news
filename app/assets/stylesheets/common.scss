@@ -43,8 +43,13 @@ header {
 main {
   padding: 20px;
   background-color: #dfdbdb;
+  min-height: 500px;
 
   h2, h3, form, ul, p {
     margin: 10px 0;
+  }
+
+  a {
+    color: #000;
   }
 }
