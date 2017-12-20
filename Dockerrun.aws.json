@@ -1,0 +1,23 @@
+{
+  "AWSEBDockerrunVersion": 1,
+  "volumes": [
+    {
+      "name": "rails-app",
+      "host": {
+        "sourcePath": "/maker-news"
+      }
+    }
+  ],
+  "containerDefinitions": [
+    {
+      "name": "rails-app",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 3000
+        }
+      ]
+    }
+  ]
+}
