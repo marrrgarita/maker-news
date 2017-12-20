@@ -15,7 +15,7 @@ port        ENV.fetch("PORT") { 3000 }
 #
 environment ENV.fetch("RAILS_ENV") { "development" }
 
-stdout_redirect '/var/log/puma/stdout.log', '/var/log/puma/stderr.log', true
+stdout_redirect 'log/stdout', 'log/stderr', true
 
 # Specifies the number of `workers` to boot in clustered mode.
 # Workers are forked webserver processes. If using threads and workers together
