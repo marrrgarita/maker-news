@@ -1,0 +1,12 @@
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+.git
+.gitignore
+
+# Rails Files
+.bundle
+.DS_Store
+.ebextensions
+.env
+log/*
+tmp/*

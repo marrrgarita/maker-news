@@ -6,3 +6,5 @@ COPY Gemfile /maker-news/Gemfile
 COPY Gemfile.lock /maker-news/Gemfile.lock
 RUN bundle install
 COPY . /maker-news
+EXPOSE 3000
+ENTRYPOINT ["bin/rails"]
