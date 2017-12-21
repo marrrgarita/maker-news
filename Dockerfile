@@ -15,6 +15,8 @@ COPY Gemfile.lock /maker-news/Gemfile.lock
 RUN bundle install
 COPY . /maker-news
 EXPOSE 3000
-run bundle exec rails db:migrate
+RUN bundle exec rails db:migrate
+RUN bundle exec rails assets:clean
 RUN bundle exec rails assets:precompile
+COPY public/assets /maker-news/public/assets
 CMD bundle exec rails s -p 3000 -b '0.0.0.0'
