@@ -1,0 +1,15 @@
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+.ebextensions
+.git
+.gitignore
+
+# Rails Files
+.bundle
+.env
+log/*
+tmp/*
+public/assets/*
+
+# Good old .DS_Store
+.DS_Store
