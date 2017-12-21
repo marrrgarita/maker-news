@@ -20,6 +20,8 @@
 # Ignore assets
 /public/assets/*
 
+!/public/assets/.keep
+
 /node_modules
 /yarn-error.log
 
