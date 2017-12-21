@@ -10,6 +10,8 @@
 log/*
 tmp/*
 public/assets/*
+/db/*.sqlite3
+/db/*.sqlite3-journal
 
 # Good old .DS_Store
 .DS_Store
