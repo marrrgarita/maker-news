@@ -10,3 +10,4 @@
 .env
 log/*
 tmp/*
+public/assets/*
